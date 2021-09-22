@@ -1,0 +1,19 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: firewalld permits access to http service
+      firewalld:
+        service: http
+        permanent: true
+        state: enabled
+        immediate: yes
+
+    - name: firewalld permits access to https service
+      firewalld:
+        service: httpd
+        permanent: true
+        state: enabled
+        immediate: yes
+    
+    - name: firewalld reload
+      command: firewall-cmd --reload
