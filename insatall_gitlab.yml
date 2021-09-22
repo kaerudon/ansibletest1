@@ -1,0 +1,11 @@
+---
+- name: install and setup gitlab
+  hosts: all
+  become: yes
+  tasks:
+    - name: Download gitlab-ce
+      get_url:
+        url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh
+        dest: /usr/local/src
+        mode: '0755'
+      
