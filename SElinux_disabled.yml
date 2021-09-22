@@ -5,7 +5,7 @@
   
   tasks:
     - name: before check selinux
-      command: cat /etc/selinux/config | grep "^SELINUX="
+      command: 'cat /etc/selinux/config | grep "^SELINUX="'
       
     - lineinfile:
         path: /etc/selinux/config
@@ -13,7 +13,7 @@
         line: 'SELINUX=disabled'
         
     - name: after check selinux
-      command: cat /etc/selinux/config | grep "^SELINUX="
+      command: 'cat /etc/selinux/config | grep "^SELINUX="'
       
     - name: os reboot
-      command: shutdown -h now
+      command: 'shutdown -h now'
