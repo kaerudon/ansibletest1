@@ -12,7 +12,7 @@
 
     - name: firewalld permits access to https service
       firewalld:
-        service: httpd
+        service: https
         permanent: true
         state: enabled
         immediate: yes
