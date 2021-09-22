@@ -8,4 +8,14 @@
         url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh
         dest: /usr/local/src
         mode: '0755'
+        
+    - name: Run script.rpm.sh
+      shell: ./script.rpm.sh
+      args:
+        chdir: /usr/local/src
+    
+    - name: Install gitlab-ee
+      yum:
+        name: gitlab-ee
+        state: latest
       
