@@ -1,0 +1,18 @@
+---
+- name: yum install curl policycoreutils openssh-server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update packages
+      yum:
+        name:
+          - curl
+          - policycoreutils
+          - openssh-server
+        state: latest
+
+- name: openssh-server enabled and running
+    service:
+      name: openssh-server
+      enabled: true
+      state: started
