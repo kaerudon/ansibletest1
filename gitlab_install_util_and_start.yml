@@ -13,6 +13,6 @@
 
     - name: openssh-server enabled and running
       service:
-        name: openssh-server
+        name: sshd
         enabled: true
         state: started
