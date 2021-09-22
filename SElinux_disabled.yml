@@ -1,19 +1,11 @@
 ---
 - name: selinux change disabled and os reboot
   hosts: all
+  gather_facts: no
   become: yes
   
-  tasks:
-    - name: before check selinux
-      command: 'cat /etc/selinux/config | grep "^SELINUX="'
-      
+  tasks:  
     - lineinfile:
         path: /etc/selinux/config
         regexp: '^SELINUX='
         line: 'SELINUX=disabled'
-        
-    - name: after check selinux
-      command: 'cat /etc/selinux/config | grep "^SELINUX="'
-      
-    - name: os reboot
-      command: 'shutdown -h now'
