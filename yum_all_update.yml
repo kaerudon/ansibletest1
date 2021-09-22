@@ -1,6 +1,5 @@
 ---
 - name: yum all update
-  hosts: all
   become: yes
   tasks:
     - name: Update packages
