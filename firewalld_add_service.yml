@@ -1,4 +1,6 @@
-- hosts: all
+---
+- name: firewalld add service http httpd
+  hosts: all
   become: yes
   tasks:
     - name: firewalld permits access to http service
