@@ -12,7 +12,7 @@
         state: latest
 
 - name: openssh-server enabled and running
-    service:
-      name: openssh-server
-      enabled: true
-      state: started
+  service:
+    name: openssh-server
+    enabled: true
+    state: started
