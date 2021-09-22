@@ -9,10 +9,17 @@
           - curl
           - policycoreutils
           - openssh-server
+          - postfix
         state: latest
 
     - name: openssh-server enabled and running
       service:
         name: sshd
+        enabled: true
+        state: started
+    
+     - name: postfix enabled and running
+       service:
+        name: postfix
         enabled: true
         state: started
