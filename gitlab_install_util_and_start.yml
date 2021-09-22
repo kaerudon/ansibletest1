@@ -20,6 +20,6 @@
     
      - name: postfix enabled and running
        service:
-        name: postfix
-        enabled: true
-        state: started
+         name: postfix
+         enabled: true
+         state: started
