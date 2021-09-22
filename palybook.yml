@@ -1,0 +1,11 @@
+---
+- name: Enable intranet services
+  hosts: web
+  become: yes
+  tasks:
+    - name: latest version of httpd and firewalld installed
+      yum:
+        name:
+          - httpd
+          - firewalld
+        state: latest
