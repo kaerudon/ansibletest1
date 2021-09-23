@@ -10,6 +10,7 @@
           - policycoreutils
           - openssh-server
           - postfix
+          - nfs-utils
         state: latest
 
     - name: openssh-server enabled and running
