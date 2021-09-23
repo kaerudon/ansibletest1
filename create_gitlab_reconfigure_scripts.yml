@@ -2,6 +2,7 @@
 - name: gitlab-ctl reconfigure
   hosts: all
   become: yes
+  ignore_errors: yes
   tasks:    
     - name: criate folder work1
       command: mkdir /work1
