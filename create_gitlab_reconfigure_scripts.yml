@@ -1,0 +1,24 @@
+---
+- name: gitlab-ctl reconfigure
+  hosts: all
+  become: yes
+  tasks:    
+    - name: criate folder work1
+      command: mkdir /work1
+      args:
+        chdir: /
+        
+    - name: criate folder scripts
+      command: mkdir scripts
+      args:
+        chdir: /work
+        
+    - name: criate script file
+      command: touch /work1/scripts/git_reconfigure.sh
+      args:
+        chdir: /work/scripts
+        
+    - name: change permition script file
+      command: chmod 755 git_reconfigure.sh
+      args:
+        chdir: /work/scripts
