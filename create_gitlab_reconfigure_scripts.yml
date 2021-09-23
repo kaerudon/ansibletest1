@@ -11,14 +11,14 @@
     - name: criate folder scripts
       command: mkdir scripts
       args:
-        chdir: /work
+        chdir: /work1
         
     - name: criate script file
       command: touch /work1/scripts/git_reconfigure.sh
       args:
-        chdir: /work/scripts
+        chdir: /work1/scripts
         
     - name: change permition script file
       command: chmod 755 git_reconfigure.sh
       args:
-        chdir: /work/scripts
+        chdir: /work1/scripts
