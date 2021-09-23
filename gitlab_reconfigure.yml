@@ -4,4 +4,4 @@
   become: yes
   tasks:    
     - name: Run gitlab-ctl reconfigure.sh
-      command: gitlab-ctl%reconfigure
+      command: /bin/gitlab-ctl reconfigure
