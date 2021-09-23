@@ -4,6 +4,7 @@
   become: yes
   tasks:    
     - name: Run gitlab-ctl reconfigure.sh
-      command: gitlab-ctl reconfigure > git-reconfigure-result.log
+      #command: gitlab-ctl reconfigure > git-reconfigure-result.log
+      command: touch test.txt
       args:
         chdir: /tmp
