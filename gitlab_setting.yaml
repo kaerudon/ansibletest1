@@ -1,0 +1,11 @@
+---
+- name: edit gitlab.rb
+  hosts: all
+  gather_facts: no
+  become: yes
+  
+  tasks:  
+    - lineinfile:
+        path: /etc/gitlab/gitlab.lb
+        regexp: '^external_url 'http://gitlab.example.com''
+        line: '^external_url 'http://100.102.145.72''
