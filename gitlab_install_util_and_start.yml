@@ -11,6 +11,11 @@
           - openssh-server
           - postfix
           - nfs-utils
+          - glibc
+          - libgcc
+          - zlib
+          - bzip2
+          - libuuid
         state: latest
 
     - name: openssh-server enabled and running
