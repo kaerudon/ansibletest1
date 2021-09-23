@@ -4,12 +4,7 @@
   become: yes
   tasks:    
     - name: Run gitlab-ctl create logfile
-      command: touch git-reconfigure-result.log
+      shell: gitlab_reconfigure.sh
       args:
-        chdir: /tmp
-        
-    - name: Run gitlab-ctl reconfigure
-      command: gitlab-ctl reconfigure >> git-reconfigure-result.log
-      args:
-        chdir: /tmp
+        chdir: /work/scripts
         
