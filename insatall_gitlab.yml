@@ -1,5 +1,5 @@
 ---
-- name: install and setup gitlab
+- name: install gitlab
   hosts: all
   become: yes
   tasks:
