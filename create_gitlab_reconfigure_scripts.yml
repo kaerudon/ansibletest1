@@ -27,7 +27,7 @@
     - name: lineinfile test
       lineinfile:
         path: /work1/scripts/git_reconfigure.sh
-        line: 'cccc: 3'
+        line: '\#\!/bin/bash\naaa'
         
       
       
