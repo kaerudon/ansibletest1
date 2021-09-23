@@ -3,9 +3,13 @@
   hosts: all
   become: yes
   tasks:    
-    - name: Run gitlab-ctl reconfigure.sh
-      command: 
-        cmd: 'touch git-reconfigure-result.log'
-        cmd: 'gitlab-ctl reconfigure > git-reconfigure-result.log'
+    - name: Run gitlab-ctl create logfile
+      command: touch git-reconfigure-result.log
       args:
         chdir: /tmp
+        
+    - name: Run gitlab-ctl reconfigure
+      command: gitlab-ctl reconfigure > git-reconfigure-result.log
+      args:
+        chdir: /tmp
+        
