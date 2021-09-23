@@ -23,3 +23,12 @@
       command: chmod 755 git_reconfigure.sh
       args:
         chdir: /work1/scripts
+    
+    - name: edit script file
+      lineinfile:
+        dest=./work1/scripts/git_reconfigure.sh
+        line={{ item }}
+      with_items:
+        - '#!/bin/bash'
+        - 'touch /work1/scripts/result.log'
+        - 'gitlab-ctl reconfigure > /work1/scripts/result.log'
