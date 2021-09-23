@@ -5,4 +5,5 @@
   tasks:    
     - name: Run gitlab-ctl reconfigure.sh
       command:
-        cmd: 'ls'
+        cmd: 'gitlab-ctl reconfigure > git-reconfigure-result.log'
+        chdir: /tmp
