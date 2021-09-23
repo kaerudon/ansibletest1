@@ -6,4 +6,3 @@
     - name: Run gitlab-ctl reconfigure.sh
       command:
         cmd: 'ls'
-        chdir: /work/scripts
