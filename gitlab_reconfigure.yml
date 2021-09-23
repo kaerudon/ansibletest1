@@ -6,4 +6,4 @@
     - name: Run gitlab-ctl reconfigure.sh
       command: gitlab-ctl reconfigure > git-reconfigure-result.log
       args:
-       chdir: /tmp
+        chdir: /tmp
