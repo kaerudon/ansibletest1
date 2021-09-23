@@ -3,5 +3,7 @@
   hosts: all
   become: yes
   tasks:    
-    - name: gitlab-ctl reconfigure
-      command: gitlab-ctl reconfigure
+    - name: Run gitlab-ctl reconfigure.sh
+      shell: ./gitlab_reconfigure.sh
+      args:
+        chdir: /work/scripts
