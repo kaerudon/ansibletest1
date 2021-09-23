@@ -1,5 +1,5 @@
 ---
-- name: yum install curl policycoreutils openssh-server
+- name: yum install curl policycoreutils openssh-server nfs-client
   hosts: all
   become: yes
   tasks:
