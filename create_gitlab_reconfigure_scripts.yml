@@ -27,7 +27,18 @@
     - name: lineinfile test
       lineinfile:
         path: /work1/scripts/git_reconfigure.sh
-        line: '\#\!/bin/bash\naaa'
+        line: '\#\!/bin/bash'
+        
+    - name: lineinfile test2
+      lineinfile:
+        path: /work1/scripts/git_reconfigure.sh
+        line: 'touch /work1/scripts/result.log'
+    
+    - name: lineinfile test3
+      lineinfile:
+        path: /work1/scripts/git_reconfigure.sh
+        line: 'gitlab-ctl reconfigure > /work1/scripts/result.log'
+        
         
       
       
