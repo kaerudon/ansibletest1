@@ -4,41 +4,37 @@
   become: yes
   ignore_errors: yes
   tasks:    
-    - name: criate folder work1
-      command: mkdir /work1
+    - name: criate folder work
+      command: mkdir /work
       args:
         chdir: /
         
     - name: criate folder scripts
       command: mkdir scripts
       args:
-        chdir: /work1
+        chdir: /work
         
     - name: criate script file
-      command: touch /work1/scripts/git_reconfigure.sh
+      command: touch /work/scripts/git_reconfigure.sh
       args:
-        chdir: /work1/scripts
+        chdir: /work/scripts
         
     - name: change permition script file
       command: chmod 755 git_reconfigure.sh
       args:
-        chdir: /work1/scripts
+        chdir: /work/scripts
         
     - name: lineinfile test
       lineinfile:
-        path: /work1/scripts/git_reconfigure.sh
-        line: '\#\!/bin/bash'
+        path: /work/scripts/git_reconfigure.sh
+        line: '#!/bin/bash'
         
     - name: lineinfile test2
       lineinfile:
-        path: /work1/scripts/git_reconfigure.sh
-        line: 'touch /work1/scripts/result.log'
+        path: /work/scripts/git_reconfigure.sh
+        line: 'touch /work/scripts/result.log'
     
     - name: lineinfile test3
       lineinfile:
-        path: /work1/scripts/git_reconfigure.sh
-        line: 'gitlab-ctl reconfigure > /work1/scripts/result.log'
-        
-        
-      
-      
+        path: /work/scripts/git_reconfigure.sh
+        line: 'gitlab-ctl reconfigure > /work/scripts/result.log'
