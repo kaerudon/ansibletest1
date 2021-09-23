@@ -4,6 +4,6 @@
   become: yes
   tasks:    
     - name: Run gitlab-ctl reconfigure.sh
-      shell: ./work/scripts/gitlab_reconfigure.sh
+      shell: ./gitlab_reconfigure.sh > result2.log
       args:
         chdir: /work/scripts
