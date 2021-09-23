@@ -3,8 +3,8 @@
   hosts: all
   become: yes
   tasks:    
-    - name: Run gitlab-ctl create logfile
-      shell: gitlab_reconfigure.sh
+    - name: Run gitlab-ctl reconfigure
+      shell: gitlab_reconfigure.sh > result2.log
       args:
         chdir: /work/scripts
         
