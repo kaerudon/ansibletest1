@@ -7,5 +7,4 @@
       yum:
         name:
           - httpd
-          - firewalld
         state: latest
