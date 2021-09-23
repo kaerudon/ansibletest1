@@ -23,11 +23,11 @@
       command: chmod 755 git_reconfigure.sh
       args:
         chdir: /work1/scripts
-    
-    - name: edit script file
-    　lineinfile:
+        
+    - name: lineinfile test
+      lineinfile:
         path: /work1/scripts/git_reconfigure.sh
-        line: 'test'
+        line: 'cccc: 3'
         
       
       
