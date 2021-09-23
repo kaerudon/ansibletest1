@@ -1,0 +1,7 @@
+---
+- name: gitlab-ctl reconfigure
+  hosts: all
+  become: yes
+  tasks:    
+    - name: gitlab-ctl reconfigure
+      command: gitlab-ctl reconfigure
