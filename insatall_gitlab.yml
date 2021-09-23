@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   tasks:
-    - name: Download gitlab-e
+    - name: Download gitlab-ee
       get_url:
         url: https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh
         dest: /usr/local/src
