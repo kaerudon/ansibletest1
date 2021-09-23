@@ -25,10 +25,9 @@
         chdir: /work1/scripts
     
     - name: edit script file
-      lineinfile:
-        dest=./work1/scripts/git_reconfigure.sh
-        line={{ item }}
-      with_items:
-        - '#!/bin/bash'
-        - 'touch /work1/scripts/result.log'
-        - 'gitlab-ctl reconfigure > /work1/scripts/result.log'
+    　lineinfile:
+        path: /work1/scripts/git_reconfigure.sh
+        line: '\#\!/bin/bash\ntouch /work1/scripts/result.log\ngitlab-ctl reconfigure \> /work1/scripts/result.log'
+        
+      
+      
