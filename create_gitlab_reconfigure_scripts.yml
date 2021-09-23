@@ -27,7 +27,7 @@
     - name: edit script file
     　lineinfile:
         path: /work1/scripts/git_reconfigure.sh
-        line: '\#\!/bin/bash\ntouch /work1/scripts/result.log\ngitlab-ctl reconfigure \> /work1/scripts/result.log'
+        line: 'test'
         
       
       
