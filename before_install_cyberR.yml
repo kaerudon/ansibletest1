@@ -14,6 +14,6 @@
           - readline-devel
           - tk-devel
           - gdbm-devel
-          - db4-devel
+#          - db4-devel
           - xz-devel
         state: latest
