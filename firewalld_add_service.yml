@@ -2,6 +2,12 @@
 - name: firewalld add service http httpd
   hosts: all
   become: yes
+  
+  vars:
+    port: 5050/tcp
+    state: enabled  # enabled: open, disabled: close
+  
+  
   tasks:
     - name: firewalld permits access to http service
       firewalld:
@@ -17,5 +23,11 @@
         state: enabled
         immediate: yes
     
+    - name: set the port state(gitlab registory)
+      firewalld: permanent=True port={{ port }} state={{ state }}
+      notify: reload firewalld
+      when: firewalld_result.stdout == "active"
+      
+      
     - name: firewalld reload
       command: firewall-cmd --reload
