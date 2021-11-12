@@ -23,10 +23,10 @@
         state: enabled
         immediate: yes
     
-    - name: set the port state(gitlab registory)
-      firewalld: permanent=True port={{ port }} state={{ state }}
-      notify: reload firewalld
-      when: firewalld_result.stdout == "active"
+    #- name: set the port state(gitlab registory)
+    #  firewalld: permanent=True port={{ port }} state={{ state }}
+    #  notify: reload firewalld
+    #  when: firewalld_result.stdout == "active"
       
       
     - name: firewalld reload
