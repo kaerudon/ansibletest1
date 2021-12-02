@@ -44,7 +44,7 @@
         chdir: /usr/local/src
         
      
-    - name: Run SProtectLinux-3.0.bin
-      shell: ./SProtectLinux-3.0.bin -hs
-      args:
-        chdir: /usr/local/src
+    #- name: Run SProtectLinux-3.0.bin
+    #  shell: ./SProtectLinux-3.0.bin -hs
+    #  args:
+    #    chdir: /usr/local/src
