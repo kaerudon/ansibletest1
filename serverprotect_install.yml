@@ -42,3 +42,9 @@
         command: tar -xvzf SPLX30-X64-Redhat8_CentOS8_Suse15-repack3.tar.gz
       args:
         chdir: /usr/local/src
+        
+     
+     - name: Run SProtectLinux-3.0.bin
+       shell: ./SProtectLinux-3.0.bin -hs
+       args:
+         chdir: /usr/local/src
