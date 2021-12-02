@@ -1,0 +1,25 @@
+---
+- name: yum install package (server protet)
+  hosts: all
+  become: yes
+  tasks:
+    - name: yum install package (server protet)
+      yum:
+        name:
+          - glibc
+          - libgcc
+          - zlib
+          - bzip2
+          - libuuid
+          - libstdc++
+          - nss-softokn-freebl
+          - perl-Sys-Syslog
+        state: latest
+    
+     - name: set firewalld ACL
+     
+     - name: get server protect module
+       get_url:
+         url: https://files.trendmicro.com/products/splx/SPLX30-X64-Redhat8_CentOS8_Suse15-repack3.tar.gz
+         dest: /tmp
+     
