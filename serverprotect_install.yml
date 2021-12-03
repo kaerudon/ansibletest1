@@ -1,9 +1,9 @@
 ---
-- name: yum install package (server protet)
+- name: yum install package (server protect)
   hosts: all
   become: yes
   tasks:
-    - name: yum install package (server protet)
+    - name: yum install package (server protcet)
       yum:
         name:
           - glibc
