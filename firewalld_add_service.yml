@@ -29,20 +29,27 @@
         port: 5050/tcp
         state: enabled
         immediate: yes
-           
-    - name: set the port state(serverprotect 14942)
-      firewalld: 
-        permanent: True
-        port: 14942/tcp
-        state: enabled
-        immediate: yes
         
-    - name: set the port state(serverprotect 14943)
+    - name: set the port state(gitlab mattermost)
       firewalld: 
         permanent: True
-        port: 14943/tcp
+        port: 8001/tcp
         state: enabled
         immediate: yes
+           
+    #- name: set the port state(serverprotect 14942)
+    #  firewalld: 
+    #    permanent: True
+    #    port: 14942/tcp
+    #    state: enabled
+    #    immediate: yes
+        
+    #- name: set the port state(serverprotect 14943)
+    #  firewalld: 
+    #    permanent: True
+    #    port: 14943/tcp
+    #    state: enabled
+    #    immediate: yes
         
     - name: firewalld reload
       command: firewall-cmd --reload
